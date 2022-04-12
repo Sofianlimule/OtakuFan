@@ -1,0 +1,27 @@
+header{
+    background-color: black;
+    padding: 2em;
+}
+
+nav{
+    ul{
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+        li{
+            a{
+                color: white;
+                font-size: 20px;
+            }
+        }
+    }
+
+}
+
+nav img{
+    width:50px;
+    padding:1%;
+    object-fit: cover;
+    height: 60px;
+}
+

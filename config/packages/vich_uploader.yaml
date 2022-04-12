@@ -1,0 +1,10 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+       personnages_image:
+           uri_prefix: /assets/image/personnages
+           upload_destination: '%kernel.project_dir%/public/assets/image/personnages'
+           namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+           delete_on_remove: true
+           delete_on_update: true

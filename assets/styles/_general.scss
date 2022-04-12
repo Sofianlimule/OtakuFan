@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto-Regular.ttf') format('truetype');
+}
+
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    
+
+}
+
+body{
+    p{
+        font-size: 18px;
+    }
+}
+
+.rimuru{
+    border-left: 2px solid pink ;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    background-color: whitesmoke;
+    color: black;
+    width: 40%;
+    img{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+.veldra{
+    border: 2px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    background-color:whitesmoke;
+    color: black;
+    width: 40%;
+
+    img{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+.testarossa{
+    border: 2px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    background-color:whitesmoke;
+    color: black;
+    width: 40%;
+    
+    img{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+.diablo{
+    border: 2px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    background-color:whitesmoke;
+    color: black;
+    width: 40%;
+    
+    img{
+        height: 300px;
+        width: 300px;
+        margin: 0px auto;
+    }
+
+}
+
+.accueil{
+    padding: 90px 0;
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}

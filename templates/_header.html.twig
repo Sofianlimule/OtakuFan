@@ -1,0 +1,16 @@
+    <header>
+        <nav>
+            <ul>
+                <li><a href="www.google.com">personnage</a></li>
+                <li><a href="www.google.com">universe</a></li>
+                <li><a href={{ path('app_home') }}><img src={{ asset("assets/image/th.jpg")}} alt="logo slime isekai site information"></a></li>
+                <li><a href="www.google.com">skills</a></li>
+                <li><a href="www.google.com">pouvoir</a></li>
+                <li><a href="www.google.com">Fanart</a></li>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li><a href={{ path('admin') }}>Admin page</a></li>
+                {% endif %}
+                
+            </ul>
+        </nav>
+    </header>

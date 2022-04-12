@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <main>
+        <section class="accueil">
+            <article class="rimuru">
+                <h1>Rimuru Tempest</h1>
+                <img src={{asset('assets/image/LIMULE.jpg')}} alt="personnage LIMULE de l'anime slime isekai">
+                <p>
+                <strong>Limule Tempest</strong> (リムル゠テンペスト Rimuru Tenpesuto) anciennement connu sous le nom de Satoru Mikami est le héros principal de Moi quand je me réincarne en Slime.Satoru Mikami se réveille et découvre qu'il s'est réincarné en slime, ce qui lui prend un certain temps pour s'y habituer. Comme les slimes ne dorment pas, ne peuvent pas voir et n'ont que le sens du toucher, il mange l'herbe à proximité pour passer le temps. Après 90 jours d'ennui, la compétence Grand Sage finit enfin d'intégrer le désir du slime d'avoir un "interlocuteur" qui l'amène à découvrir le monde avec la nouvelle fonctionnalité questions et réponses de la compétence.
+                </p>
+            </article>
+        </section>
+        {% for personnage in personnages %}
+            <section class="accueil">
+                <article class={{personnage.Name}}>
+                    <h1>{{personnage.Name}}</h1>
+                    <img src={{asset('assets/image/LIMULE.jpg')}} alt="personnage LIMULE de l'anime slime isekai">
+                    <p>
+                    <strong>{{personnage.Name}}</strong> (リムル゠テンペスト Rimuru Tenpesuto) anciennement connu sous le nom de Satoru Mikami est le héros principal de Moi quand je me réincarne en Slime.Satoru Mikami se réveille et découvre qu'il s'est réincarné en slime, ce qui lui prend un certain temps pour s'y habituer. Comme les slimes ne dorment pas, ne peuvent pas voir et n'ont que le sens du toucher, il mange l'herbe à proximité pour passer le temps. Après 90 jours d'ennui, la compétence Grand Sage finit enfin d'intégrer le désir du slime d'avoir un "interlocuteur" qui l'amène à découvrir le monde avec la nouvelle fonctionnalité questions et réponses de la compétence.
+                    </p>
+                </article>
+            </section>
+        {% endfor %}
+    </main>
+{% endblock %}
