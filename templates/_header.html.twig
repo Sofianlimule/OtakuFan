@@ -8,9 +8,14 @@
                 <li><a href="www.google.com">pouvoir</a></li>
                 <li><a href="www.google.com">Fanart</a></li>
                 {% if is_granted('ROLE_ADMIN') %}
-                    <li><a href={{ path('admin') }}>Admin page</a></li>
+                    <li><a href={{ path('admin') }}>Admin</a></li>
                 {% endif %}
-                
+                {% if is_granted('ROLE_USER') %}
+                    <li><a href={{ path('app_login') }}>se connecter</a></li>
+                {% endif %}
+                 {% if is_granted('ROLE_USER') %}
+                    <li><a href={{ path('app_logout') }}>inscription</a></li>
+                {% endif %}
             </ul>
         </nav>
     </header>
