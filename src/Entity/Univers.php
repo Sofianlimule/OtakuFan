@@ -35,6 +35,11 @@ class Univers
      */
     private $personnages;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $Description;
+
     public function __construct()
     {
         $this->personnages = new ArrayCollection();
@@ -88,6 +93,18 @@ class Univers
                 $personnage->setUnivers(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->Description;
+    }
+
+    public function setDescription(string $Description): self
+    {
+        $this->Description = $Description;
 
         return $this;
     }

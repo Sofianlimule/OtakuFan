@@ -2,19 +2,19 @@
         <nav>
             <ul>
                 <li><a href="www.google.com">personnage</a></li>
-                <li><a href="www.google.com">universe</a></li>
+                <li><a href="{{path('app_univers')}}">univers</a></li>
                 <li><a href={{ path('app_home') }}><img src={{ asset("assets/image/th.jpg")}} alt="logo slime isekai site information"></a></li>
                 <li><a href="www.google.com">skills</a></li>
                 <li><a href="www.google.com">pouvoir</a></li>
-                <li><a href="www.google.com">Fanart</a></li>
+                {% if app.user == false %}
+                <li><a href={{ path('app_login') }}>se connecter</a></li>
+                <li><a href={{ path('app_register') }}>inscription</a></li>
+                {% endif %}
                 {% if is_granted('ROLE_ADMIN') %}
                     <li><a href={{ path('admin') }}>Admin</a></li>
                 {% endif %}
-                {% if is_granted('ROLE_USER') %}
-                    <li><a href={{ path('app_login') }}>se connecter</a></li>
-                {% endif %}
                  {% if is_granted('ROLE_USER') %}
-                    <li><a href={{ path('app_logout') }}>inscription</a></li>
+                    <li><a href={{ path('app_logout') }}>logout</a></li>
                 {% endif %}
             </ul>
         </nav>

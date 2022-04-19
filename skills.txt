@@ -2,3 +2,6 @@ Limule :
 Pouvoirs: xxxxxxx
 Skills : Absorption - Unique
 	Surpuissance - Physique
+ <a href="{{path('app_univers_details', {id:Univers.id[1]})}}"><img src="" alt=""></a>
+                    <a href="{{path('app_univers_details', {id:Univers.id[2]})}}"><img src="" alt=""></a>
+                    <a href="{{path('app_univers_details', {id:Univers.id[3]})}}"><img src="" alt=""></a>
