@@ -40,21 +40,21 @@ class Personnages
     /**
      * @var string
      *
-     * @ORM\Column(name="occupation", type="string", length=255, nullable=false)
+     * @ORM\Column(name="occupation", type="text", length=0, nullable=false)
      */
     private $occupation;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="ranks_cultivations", type="string", length=255, nullable=false)
+     * @ORM\Column(name="ranks_cultivations",type="text", length=0, nullable=false )
      */
     private $ranksCultivations;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="alias", type="string", length=255, nullable=false)
+     * @ORM\Column(name="alias",type="text", length=0, nullable=false )
      */
     private $alias;
 
@@ -82,14 +82,14 @@ class Personnages
     /**
      * @var string
      *
-     * @ORM\Column(name="proches", type="string", length=255, nullable=false)
+     * @ORM\Column(name="proches", type="text", length=0, nullable=false)
      */
     private $proches;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="amis", type="string", length=255, nullable=false)
+     * @ORM\Column(name="amis", type="text", length=0, nullable=false)
      */
     private $amis;
 
@@ -177,12 +177,18 @@ class Personnages
     private $univers;
 
     /**
+     * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="personnages")
+     */
+    private $commentaires;
+
+    /**
      * Constructor
      */
     public function __construct()
     {
         $this->pouvoirs = new \Doctrine\Common\Collections\ArrayCollection();
         $this->skills = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->commentaires = new ArrayCollection();
     }
 
     public function __toString()
@@ -458,5 +464,35 @@ class Personnages
         }
 
         return;
+    }
+
+    /**
+     * @return Collection<int, Comment>
+     */
+    public function getCommentaires(): Collection
+    {
+        return $this->commentaires;
+    }
+
+    public function addCommentaire(Comment $commentaire): self
+    {
+        if (!$this->commentaires->contains($commentaire)) {
+            $this->commentaires[] = $commentaire;
+            $commentaire->setPersonnages($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommentaire(Comment $commentaire): self
+    {
+        if ($this->commentaires->removeElement($commentaire)) {
+            // set the owning side to null (unless already changed)
+            if ($commentaire->getPersonnages() === $this) {
+                $commentaire->setPersonnages(null);
+            }
+        }
+
+        return $this;
     }
 }

@@ -1,7 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello UniversController!{% endblock %}
-
+{% block title %}Univers{% endblock %}
 {% block body %}
- <p> {{univers.Description|raw}}</p>
+
+    <section id="universS">
+    {% for univers in univers %}
+        <div class="universS">
+        <a href={{ path('app_univers_single', {id:univers.id})}}>
+        <div class="title"> {{univers.nom}}</div>
+        <img class="fit5"src={{vich_uploader_asset(univers, 'imageFile')}} alt="">
+        </div>
+    
+        
+    {% endfor %}
+    </section>
 {% endblock %}

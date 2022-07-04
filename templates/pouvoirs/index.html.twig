@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pouvoirs{% endblock %}
+
+{% block body %}
+
+    <div id="pouvoirs">
+        <p>Un pouvoirs est utilisés par plusieurs personnes les pouvoirs  
+        sont des pouvoirs qui peuvent pas évoluer et aussi qui sont pas du 
+        tout rare. </p>
+    </div>
+    <section class="pouvoirslist">
+
+        {% for pouvoirs in pouvoirs %}
+            
+            
+           <p> {{pouvoirs.nom}}</p>
+            
+            
+        {% endfor %}
+
+    </section>
+{% endblock %}

@@ -1,14 +1,41 @@
     <header>
-        <nav>
-            <ul>
-                <li><a href="www.google.com">personnage</a></li>
+        <nav id="navbar">
+                <div class="logo">
+                    <li><a href={{ path('app_home') }}><img src={{ asset("assets/image/LOGO-SOFIAN.png")}} alt="logo slime isekai site information"></a></li>
+                </div>
+                <ul class="menu">
+                <li><a href="{{path('app_personnages')}}">personnage</a></li>
                 <li><a href="{{path('app_univers')}}">univers</a></li>
-                <li><a href={{ path('app_home') }}><img src={{ asset("assets/image/th.jpg")}} alt="logo slime isekai site information"></a></li>
-                <li><a href="www.google.com">skills</a></li>
-                <li><a href="www.google.com">pouvoir</a></li>
+                <li><a href="{{path('app_skills')}}">skills</a></li>
+                <li><a href="{{path('app_pouvoirs')}}">pouvoir</a></li>
                 {% if app.user == false %}
-                <li><a href={{ path('app_login') }}>se connecter</a></li>
-                <li><a href={{ path('app_register') }}>inscription</a></li>
+                <li><a href={{ path('app_login') }}><i class="fa-solid fa-lock"></i></a></li>
+                <li><a href={{ path('app_register') }}><i class="fa-solid fa-address-card"></i></a></li>
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li><a href={{ path('admin') }}>Admin</a></li>
+                {% endif %}
+                 {% if is_granted('ROLE_USER') %}
+                    <li><a href={{ path('app_logout') }}>logout</a></li>
+                {% endif %}
+                </ul>
+           </nav>
+           <div id="icon">
+            <i class="fas fa-bars"></i>
+            </div>
+           <nav class="navmobile">
+        
+            <div class="logo">
+                <li><a href={{ path('app_home') }}><img src={{ asset("assets/image/LOGO-SOFIAN.png")}} alt="logo slime isekai site information"></a></li>
+            </div>
+            <ul class="menumobile displaynone" id="menuburger">
+                <li><a href="{{path('app_personnages')}}">personnage</a></li>
+                <li><a href="{{path('app_univers')}}">univers</a></li>
+                <li><a href="{{path('app_skills')}}">skills</a></li>
+                <li><a href="{{path('app_pouvoirs')}}">pouvoir</a></li>
+                {% if app.user == false %}
+                <li><a href={{ path('app_login') }}><i class="fa-solid fa-lock"></i></a></li>
+                <li><a href={{ path('app_register') }}><i class="fa-solid fa-address-card"></i></a></li>
                 {% endif %}
                 {% if is_granted('ROLE_ADMIN') %}
                     <li><a href={{ path('admin') }}>Admin</a></li>
@@ -17,5 +44,10 @@
                     <li><a href={{ path('app_logout') }}>logout</a></li>
                 {% endif %}
             </ul>
-        </nav>
+       </nav>
     </header>
+
+
+    
+
+   

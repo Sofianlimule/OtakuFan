@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Personnages list{% endblock %}
+
+{% block body %}
+ 
+    <section class="personnageslist">
+    
+        {% for personnage in personnages %}
+            <div class="persos">
+                <a href={{path('app_personnages_details', {id:personnage.id})}}>
+                    <div class="name">
+                        <h1>{{personnage.name}}</h1>
+                        <img class="fit2" src={{vich_uploader_asset(personnage, 'imageFile')}} alt={{personnage.name}}>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    
+    </section>
+    <section>
+         {{ include('comment/index.html.twig') }}
+    </section>
+{% endblock %}

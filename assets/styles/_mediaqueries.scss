@@ -1,0 +1,347 @@
+@media screen and (max-width: 1024px){
+    #icon{
+        display: block;
+    }
+
+    #navbar{
+        display: none;
+        visibility: hidden;
+    }
+
+    .navmobile{
+        display: block;
+        background-color: blueviolet;
+        position: relative;
+    }
+
+    .menumobile{
+        padding-top: 10em;
+    }
+    
+    #global{
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .parti1{
+    
+        // display: flex;
+        // align-items: flex-start;
+        // gap: 2%;
+        // padding: 2em;
+        // border: solid black;
+        // color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border: solid black;
+            gap: 2%;
+            padding: 2em;
+            width: 400px;
+            justify-content: center;
+            text-align: center;
+    
+        
+        .prenom{
+           text-align: center;
+           
+        }
+    
+        .parti1 h1 {
+            color: white;
+            background-color: black;
+            width: 431px;
+        }
+    
+    }
+    
+    
+    .partihistoire{
+    
+        width: 500px;
+        color: white;
+        margin-left: 3em;
+    
+        h1{
+            font-size: 25px;
+            padding: 1em;
+            text-align: left;
+            
+        }
+    
+        p{
+            padding-right: 2em;
+            font-size: 18px;
+        }
+    
+    }
+
+    .otakufan{
+        width: 400px;
+    }
+
+    #pouvoirs{
+        margin: auto;
+        text-align: center;
+        width: 650px;
+        margin-top: 2em;
+        border: 1px solid blanchedalmond;
+        padding: 1em;
+    
+    }
+
+    #skills{
+
+        margin: auto;
+        text-align: center;
+        width: 650px;
+        margin-top: 2em;
+        border: 1px solid blanchedalmond;
+        padding: 1em;
+        
+}
+
+
+}
+
+@media screen and (max-width: 475px){
+    
+    .otakufan{
+        width: 300px;
+        
+        h1{
+            font-size: 14px;
+        }
+    }
+
+    
+    .site{
+        
+        width: 300px;
+
+        p{
+            font-size: 14px;
+        }
+    
+    }
+
+    .fit{
+        object-fit: cover;
+        position: relative;
+        width: 225px;
+        height: 170px;
+        text-align:center;
+        margin:auto;
+        display:flex;
+        padding: 3em;
+    }
+
+    #comments{
+
+        background-color: black;
+        height: auto;
+        margin-bottom: 2em;
+        border-radius: 30px;
+        width: 320px;
+        margin: auto;
+        
+        p{
+            color: white;
+            text-align: center;
+        }
+}
+
+.commentaires{
+
+    margin: 2em;
+
+    h2{
+        text-align: center;
+        font-size: 18px;
+    }
+
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .button-container{
+        padding: 1em;
+    }
+
+    .button{
+        width: 300px;
+    }
+
+    Textarea{
+        width: 90vw;
+        background-color: white;
+    }
+
+}
+
+.partihistoire{
+
+    width: 275px;
+    color: white;
+    margin-left: 3em;
+
+    h1{
+        font-size: 25px;
+        padding: 1em;
+        text-align: left;
+        
+    }
+
+    p{
+        padding-right: 2em;
+        font-size: 18px;
+    }
+
+}
+
+.parti1{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: solid black;
+    gap: 2%;
+    padding: 2em;
+    width: 275px;
+    justify-content: center;
+    text-align: center;
+
+h1{
+    color: white;
+    background-color: black;
+    width: 343px;
+}
+
+.prenom{
+   text-align: center;
+}
+
+.Alias-label{
+    
+    color: white;
+    background-color: black;
+    width: 343px;
+}
+
+.statut-block,.genre-block,.race-block,.profession-block,.occupation-block,.proches-block,
+.amis-block,.ennemies-block,.rankscultivations-block,.apparition-block{
+
+    margin-bottom: 1em;
+
+}
+
+}
+
+#universU{
+
+    width: 300px;
+    
+    .fit4{
+
+        object-fit: cover;
+        position: relative;
+        width: 225px;
+        height: 170px;
+        text-align:center;
+        margin:auto;
+        display:flex;
+        padding: em;
+    
+
+    }
+
+}
+
+#pouvoirs{
+    margin: auto;
+    text-align: center;
+    width: 350px;
+    margin-top: 2em;
+    border: 1px solid blanchedalmond;
+    padding: 1em;
+
+}
+
+#skills{
+
+    margin: auto;
+    text-align: center;
+    width: 350px;
+    margin-top: 2em;
+    border: 1px solid blanchedalmond;
+    padding: 1em;
+    
+}
+
+.fit5{
+
+    object-fit: cover;
+    position: relative;
+    width: 220px;
+    height: 170px;
+    text-align:center;
+    margin:auto;
+    display:flex;
+    padding: 3em;
+
+}
+
+}
+
+@media screen and (max-width: 375px){
+     
+    #universU{
+
+        width: 270px;
+        
+        .fit4{
+    
+            object-fit: cover;
+            position: relative;
+            width: 225px;
+            height: 170px;
+            text-align:center;
+            margin:auto;
+            display:flex;
+            padding: em;
+        
+    
+        }
+    
+    }
+
+    #pouvoirs{
+        margin: auto;
+        text-align: center;
+        width: 250px;
+        margin-top: 2em;
+        border: 1px solid blanchedalmond;
+        padding: 1em;
+    
+    }
+
+
+    #skills{
+
+        margin: auto;
+        text-align: center;
+        width: 250px;
+        margin-top: 2em;
+        border: 1px solid blanchedalmond;
+        padding: 1em;
+        
+}
+
+
+
+}

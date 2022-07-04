@@ -1,0 +1,25 @@
+{% block comments %}
+    {{ include('comment/create.html.twig') }}
+    {% for comment in comments %}
+        <div id="comments">
+            <p>
+                    {{ comment.author.username }}
+                : membre
+            </p>
+            <p class="zonetxt">{{ comment.Text }}</p>
+            {% if app.user == comment.author %}
+                
+                <div class="btn_admin">
+                    <a href="{{path('app_comment_delete', {id: comment.id})}}"><i class="fa-solid fa-trash"></i></a>
+                    <a href="{{path('app_comment_edit', {id: comment.id})}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                </div>
+               
+           
+            {% endif %}
+
+
+
+        </div>
+    {% endfor %}
+{% endblock %}
+

@@ -1,27 +1,80 @@
 header{
-    background-color: black;
-    padding: 2em;
+    background-color: purple;
+    padding: 1em;
 }
 
-nav{
-    ul{
-        display: flex;
-        justify-content: space-around;
-        align-items:center;
-        li{
-            a{
-                color: white;
-                font-size: 20px;
-            }
-        }
+#navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    a{
+        color: white;
     }
-
 }
 
-nav img{
-    width:50px;
-    padding:1%;
-    object-fit: cover;
-    height: 60px;
+.logo{
+    
+    img{
+        width: 50px;
+        height: 50px;
+    }
+    
 }
 
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+}
+
+
+
+.displaynone{
+    display: none;
+}
+
+#icon{
+    display: none;
+    position: absolute;
+    color: white;
+    z-index: 15;
+    right: 2em;
+    top: 2em;
+}
+
+
+.menumobile{
+    width: 150px;
+    position: absolute;
+    left: 0;
+    bottom: -15em;
+    background-color: rgba(0, 0, 0, 0.534);
+    padding-top: 9em;
+    padding-left: 2em;
+    animation-name: glisse;
+    animation-duration: 0.5s;
+
+    li{
+        padding-bottom: 2em;
+        border-bottom: 1px solid white;
+        padding-right: 0.5em;
+    }
+}
+
+.navmobile{
+    display: none;
+}
+
+@keyframes glisse{
+    from{
+        left:-12em;
+    }
+    to{
+        left:0;
+    }
+}

@@ -5,3 +5,8 @@ Skills : Absorption - Unique
  <a href="{{path('app_univers_details', {id:Univers.id[1]})}}"><img src="" alt=""></a>
                     <a href="{{path('app_univers_details', {id:Univers.id[2]})}}"><img src="" alt=""></a>
                     <a href="{{path('app_univers_details', {id:Univers.id[3]})}}"><img src="" alt=""></a>
+
+liste des perso -> detail [DONE]
+image Univers [DONE]
+voir aussi mes pages ce qui s'affiche pas et voir pk les fontawsome marche pas pour se connecter et inscription admin 
+et aussi logout

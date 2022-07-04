@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Skills{% endblock %}
+
+{% block body %}
+
+    <div id="skills">
+        <p>Skills est des compétences qui sont uniques 
+        est aussi que elle peuvent évoluer contrairement au 
+        pouvoirs et ces compétences sont aussi rare plus rare 
+        que les pouvoirs. </p>
+    </div>
+    <section class="skillslist">
+
+        {% for skills in skills %}
+
+            <p>{{skills.nom}}</p>
+            <p> {{skills.type}}</p>
+
+        {% endfor %}
+
+    </section>
+{% endblock %}
+

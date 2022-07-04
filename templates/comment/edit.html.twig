@@ -1,0 +1,16 @@
+{% if app.user %}
+<div class="createComment">
+ <div class="commentaires">
+    <h2>Modifier un commentaire</h2>
+    {{form_start(commentform)}}
+    {{form_row(commentform.Text, {
+        'label' : 'Commentaire : ',
+        'attr': {'class': 'form-control'}
+    })}}
+    <div class="button-container">
+        <button type="submit" class="button">Envoyer votre commentaire</button>
+    </div>
+    {{form_end(commentform)}}
+</div>
+</div>
+{% endif %}

@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto-Regular.ttf') format('truetype');
+}
+
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+body{
+
+    background-color: #474646;
+    color: white;
+
+    p{
+        font-size: 18px;
+        color: white;
+        font-family: 'Roboto';
+    }
+}
+
+#accueil{
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+}
+
+
+.accueil{
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    color: black;
+}
+
+.fit{
+    object-fit: cover;
+    position: relative;
+    width: 325px;
+    height: 270px;
+    text-align:center;
+    margin:auto;
+    display:flex;
+    padding: 3em;
+}
+
+.otakufan{
+    background-color: #EB1ECA;
+    width: 1100px;
+    margin: auto;
+    margin-top: 2em;
+
+    
+    h1{
+        text-align: center;
+    }
+}
+
+.site{
+        text-align: center;
+        width: 700px;
+        margin: auto;
+        padding: 2em;
+}
+
+.nom1{
+    position: absolute;
+    top: 500px;
+    z-index: 1;
+}
+
+
+.displayNone{
+    display: none;
+}

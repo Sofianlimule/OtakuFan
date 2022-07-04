@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Univers détail{% endblock %}
+{% block body %}
+
+    <section id="universU">
+        <article class="universunique">
+        <img class="fit4"src={{vich_uploader_asset(univers, 'imageFile')}} alt=""> 
+        <h1>{{univers.nom}}</h1>
+        <p>{{univers.Description|raw}}</p>
+        {# <p>{{univers.personnages}}</p> #}
+    </article>
+    
+    
+    </section>
+     <section>
+         {{ include('comment/index.html.twig') }}
+    </section>
+     
+{% endblock %}

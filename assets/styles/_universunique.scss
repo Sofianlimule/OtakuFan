@@ -1,0 +1,30 @@
+#universU{
+
+    width: 500px;
+    padding-top: 2em;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 2%;
+    padding: 2em;
+    margin-top: 2em;
+    border: solid;
+    border-radius: 30px;
+    margin-bottom: 1em;
+    
+    .fit4{
+
+        object-fit: cover;
+        position: relative;
+        width: 325px;
+        height: 270px;
+        text-align:center;
+        margin:auto;
+        display:flex;
+    
+
+    }
+
+}
+

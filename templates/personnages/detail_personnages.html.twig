@@ -1,0 +1,157 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Personnages détails{% endblock %}
+
+{% block body %}
+            <div id="global">
+            <section class="accueil">
+                <article class="parti1"{{personnage.Name}}>
+                    
+                        
+                        <div class="prenom">
+                        
+                            <h1>{{personnage.Name}}</h1>
+                            <img class="fit3" src={{vich_uploader_asset(personnage, 'imageFile')}} alt={{personnage.name}}>
+                            
+                            <div class="alias-block">
+                                <div class="Alias-label">Alias</div>
+                                    <div class="Alias-content">
+                                        {{personnage.Alias|raw}}
+                                    </div> 
+                            </div>
+                        </div>
+
+                        <div class="descrip">
+
+                                <h1>Description</h1>
+                                
+                            <div class="statut-block">
+                                <div class="statut-label">statut:</div>
+                                <div class="statut-content">
+                                    {{personnage.Status}}  
+                                </div> 
+                            </div>
+                            
+                            <div class="genre-block">
+                                <div class="genre-label">genre:</div>
+                                <div class="genre-content">
+                                    {{personnage.Genre}}
+                                </div> 
+                            </div>
+                        
+                            <div class="race-block">
+                                <div class="race-label">race:</div>
+                                <div class="race-content">
+                                   {{personnage.Race}}
+                                </div> 
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="statues">
+                        
+                            <h1>Status</h1>
+
+                            <div class="profession-block">
+                                <div class="profession-label">profession:</div>
+                                    <div class="profession-content">
+                                    {{personnage.profession}}
+                                    </div> 
+                            </div>
+
+                            <div class="occupation-block">
+                                <div class="occupation-content"></div>
+                                    <span class="occupation-label">Occupation:</span>
+                                    {{personnage.occupation|raw}}
+                            </div> 
+
+                        </div> 
+                        
+                        <div class="Desrelations">   
+                            
+                            <h1>Des relations</h1>
+
+                            <div class="proches-block">
+                                <div class="proches-label">Proches:</div>
+                                    <div class="proches-content">
+                                        {{personnage.proches|raw}}
+                                    </div> 
+                            </div>
+                            
+                            <div class="amis-block">
+                                <div class="amis-label">Amis:</div>
+                                    <div class="amis-content">
+                                        {{personnage.amis|raw}}
+                                    </div> 
+                            </div>
+
+                            <div class="ennemies-block">
+                                <div class="ennemies-label">Ennemies:</div>
+                                    <div class="ennemies-content">
+                                        {{personnage.ennemies}}
+                                    </div> 
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="ranlsculti">
+
+                            <h1>Ranks Cultivations</h1>
+
+                            <div class="rankscultivations-block">
+                                <div class="rankscultivations-label">ranks cultivations:</div>
+                                    <div class="rankscultivations-content">
+                                        {{personnage.ranksCultivations|raw}} 
+                                    </div> 
+                            </div>
+ 
+                        </div>
+
+                        <div class="talent">
+
+                            <h1>Pouvoir et Skills</h1>
+
+                            {% for pouvoir in personnage.pouvoirs %}
+                                <p>{{pouvoir}}</p>
+                            {% endfor %}
+                            {% for skills in personnage.skills %}
+                                <p>{{skills}}</p>
+                            {% endfor %}
+                        
+                        </div>
+
+
+
+                        <div class="FirstAppearance">
+                            
+                            <h1>Premier apparition</h1>
+                            
+                            <div class="apparition-block">
+                                <div class="apparition-label">premier apparition:</div>
+                                    <div class="apparition-content">
+                                        {{personnage.premierApparition|raw}} 
+                                    </div> 
+                            </div>
+                        </div>
+                </article>    
+            </section>
+            {# afficher les personnages de l'univers en question  #}
+
+            <section id="partiehistoire">
+             <article class="partihistoire">   
+                    
+                    <div class="histoire-block">
+                        <div class="histoire-label"><h1>Histoire</h1></div>
+                            <div class="histoire-content">
+                                <p>{{personnage.histoire|raw}}</p>
+                            </div>  
+                    </div>
+
+                 </article>
+            </section>
+
+            </div>
+             <section class="commentaires">
+            {{ include('comment/index.html.twig') }}
+            </section>
+{% endblock %}

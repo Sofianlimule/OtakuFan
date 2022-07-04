@@ -1,38 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
     <main>
-        {# <section class="accueil">
-            <article class="rimuru">
-                <h1>Rimuru Tempest</h1>
-                <img src={{asset('assets/image/LIMULE.jpg')}} alt="personnage LIMULE de l'anime slime isekai">
-                <p>
-                <strong>Limule Tempest</strong> (リムル゠テンペスト Rimuru Tenpesuto) anciennement connu sous le nom de Satoru Mikami est le héros principal de Moi quand je me réincarne en Slime.Satoru Mikami se réveille et découvre qu'il s'est réincarné en slime, ce qui lui prend un certain temps pour s'y habituer. Comme les slimes ne dorment pas, ne peuvent pas voir et n'ont que le sens du toucher, il mange l'herbe à proximité pour passer le temps. Après 90 jours d'ennui, la compétence Grand Sage finit enfin d'intégrer le désir du slime d'avoir un "interlocuteur" qui l'amène à découvrir le monde avec la nouvelle fonctionnalité questions et réponses de la compétence.
-                </p>
-            </article>
-        </section> #}
-        {% for personnage in personnages %}
-            <section class="accueil">
-                <article class={{personnage.Name}}>
-                    <div class= "tout">
-                    <h1>{{personnage.Name}}</h1>
-                    <img src={{vich_uploader_asset(personnage, 'imageFile')}} alt="personnage LIMULE de l'anime slime isekai">
-                    {{personnage.occupation}} {{personnage.ranksCultivations}} {{personnage.Alias}} {{personnage.Status}}
-                    {{personnage.Genre}} {{personnage.Race}} {{personnage.proches}} {{personnage.amis}} {{personnage.ennemies}} {{personnage.profession}} {{personnage.premierApparition}} </div>
-                    <p> {{personnage.histoire|raw}}</p>
-                    {% for pouvoir in personnage.pouvoirs %}
-                        {{pouvoir}}
-                    {% endfor %}
-                     {% for skills in personnage.skills %}
-                        {{skills}}
-                    {% endfor %}
-
-                   
-                </article>
-            </section>
+            <div class="otakufan">
+            <h1>Bienvenue sur otakufan</h1>
+            </div>
+            <div class="site">
+            <h1>Presentations Site</h1>
+                <p>otakufan est un site qui parle de manga , manhua, manhwa 
+                est aussi presente avec detail le personnages et n'hesiter pas 
+                me donner votre avis en commentaires.</p>
+            </div>
+                        
+             <section id="accueil">
+            {% for universUnique in univers %}
+                <div class="accueil">
+                    <a href={{ path('app_univers_single', {id:universUnique.id})}}>
+                        <img class="fit" src={{vich_uploader_asset(universUnique, 'imageFile')}} alt=""/>
+                        {# <p class="nom1">{{ universUnique.nom}}</p> #}
+                    </a>
+                </div>
         {% endfor %}
+        </section>
     </main>
 {% endblock %}
 

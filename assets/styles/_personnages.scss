@@ -1,0 +1,38 @@
+.persos{
+
+   h1{
+       padding: 15px;
+       color: white;
+       text-align: center;
+   } 
+
+   
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    color: white;
+
+}
+
+.personnageslist{
+
+    padding: 90px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+
+}
+
+.fit2{
+
+    object-fit: cover;
+    position: relative;
+    width: 119px;
+    height: 166px;
+    text-align:center;
+    display:flex;
+    padding: 3em;
+
+
+}
