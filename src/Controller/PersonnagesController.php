@@ -67,5 +67,5 @@ class PersonnagesController extends AbstractController
             'commentform' => $form->createView(),
             'personnage' => $personnages,
         ]);
-    }
+     }
 }

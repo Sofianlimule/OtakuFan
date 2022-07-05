@@ -104,6 +104,7 @@
 }
 
 
+
 }
 
 @media screen and (max-width: 475px){
@@ -146,6 +147,7 @@
         border-radius: 30px;
         width: 320px;
         margin: auto;
+        margin-top: 1em;
         
         p{
             color: white;
@@ -174,12 +176,17 @@
     }
 
     .button{
-        width: 300px;
+        width: 250px;
+        border-radius: 30px;
+        background-color: blue;
+        height: 30px;
     }
 
     Textarea{
-        width: 90vw;
+        width: 84vw;
         background-color: white;
+        border-radius: 30px;
+        height: 101px;
     }
 
 }

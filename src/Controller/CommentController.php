@@ -34,12 +34,11 @@ class CommentController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $comment->setPersonnages($personnages);
             $comment->setAuthor($this->getUser());
             $em->persist($comment);
             $em->flush();
 
-            return $this->redirectToRoute('app_home');
+            return $this->redirectToRoute('app_personnages');
         }
 
         return $this->renderForm('comment/create.html.twig', [
@@ -56,11 +55,11 @@ class CommentController extends AbstractController
                 $em->remove($comment);
                 $em->flush();
 
-                return $this->redirectToRoute('app_home');
+                return $this->redirectToRoute('app_personnages');
 
         }
 
-        return $this->redirectToRoute('app_home');
+        return $this->redirectToRoute('app_personnages');
 
     }
 
@@ -79,11 +78,11 @@ class CommentController extends AbstractController
 
                 $em->flush();
 
-                $this->addFlash('success', 'Article modifié avec succès !');
+                $this->addFlash('success', 'commentaire modifié avec succès !');
 
 
 
-                return $this->redirectToRoute('app_home');
+                return $this->redirectToRoute('app_personnages');
 
             }
 
@@ -101,7 +100,7 @@ class CommentController extends AbstractController
 
 
 
-        return $this->redirectToRoute('app_home');
+        return $this->redirectToRoute('app_personnages');
 
     }
 

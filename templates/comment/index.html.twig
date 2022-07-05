@@ -2,7 +2,7 @@
     {{ include('comment/create.html.twig') }}
     {% for comment in comments %}
         <div id="comments">
-            <p>
+            <p class="membre">
                     {{ comment.author.username }}
                 : membre
             </p>
@@ -16,8 +16,6 @@
                
            
             {% endif %}
-
-
 
         </div>
     {% endfor %}
