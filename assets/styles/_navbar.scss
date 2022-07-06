@@ -11,10 +11,23 @@ header{
     align-items: center;
     position: relative;
 
+}
+
+.menu{
     a{
         color: white;
+        font-size: 20px;
+        justify-content: space-around;
+    }
+    
+    a:hover{
+        color: hotpink;
+        background-color: blue;
+        
     }
 }
+
+
 
 .logo{
     

@@ -1,10 +1,14 @@
 .commentaires{
 
     margin: 2em;
+    label[for='comment_Text']{
+        display: none;
+    }
 
     h2{
         text-align: center;
         font-size: 18px;
+        padding: 1em;
     }
 
     form{
@@ -23,6 +27,7 @@
         border-radius: 30px;
         background-color: blue;
         height: 30px;
+        color: white;
     }
 
     Textarea{

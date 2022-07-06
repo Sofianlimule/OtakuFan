@@ -3,6 +3,12 @@
     src: url('../font/Roboto-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Sanchez';
+    src: url('../font/Sanchez-Regular.ttf') format('truetype');
+}
+
+
 *{
     text-decoration: none;
     margin: 0px;
@@ -12,13 +18,19 @@
 
 body{
 
+    h1,h2{
+        font-family: 'Sanchez';
+    }
+    
+    
     background-color: #474646;
     color: white;
+    font-family: 'Roboto';
 
     p{
         font-size: 18px;
         color: white;
-        font-family: 'Roboto';
+        
     }
 }
 
